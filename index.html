@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALOK DAS | Women's Bespoke Couture</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Custom Tailwind Configuration for Royal Aesthetic
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#0A1931', // Deep Navy Blue (Royal)
+                        'accent-gold': '#C89932', // Soft Gold Accent
+                        'bg-cream': '#FEFCF3',    // Light Cream Background
+                        'text-dark': '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'], // Elegant Serif for main titles
+                        script: ['Great Vibes', 'cursive'], // Cursive for the 'Bespoke Couture' subtitle
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Load Google Fonts for the logo aesthetic -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <!-- Icon Library (Lucide Icons) -->
+    <style>
+        /* Custom scrollbar for aesthetic horizontal scrolling */
+        .horizontal-scroll-container::-webkit-scrollbar {
+            height: 6px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-thumb {
+            background: #C89932;
+            border-radius: 10px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+            background: #b8860b;
+        }
+
+        /* Set base styles for the page */
+        body {
+            background-color: #FEFCF3;
+            color: #333333;
+        }
+    </style>
+</head>
+<body class="font-sans min-h-screen flex flex-col">
+
+    <!-- HEADER: Logo, Search, and Icons -->
+    <header class="sticky top-0 z-40 bg-bg-cream shadow-md border-b border-gray-100">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            
+            <!-- Logo Section (Replicating the royal aesthetic from the image) -->
+            <div class="flex flex-col items-center">
+                <h1 class="font-serif text-3xl md:text-4xl text-primary-dark tracking-widest uppercase">
+                    ALOK DAS
+                </h1>
+                <p class="font-script text-lg md:text-xl text-text-dark -mt-1">
+                    Women's Bespoke Couture
+                </p>
+            </div>
+
+            <!-- Right-hand Icons and Search -->
+            <div class="flex items-center space-x-4 text-primary-dark">
+                <!-- Search Icon (Using inline SVG for compatibility) -->
+                <button class="p-2 hover:text-accent-gold transition duration-200 rounded-full focus:outline-none focus:ring-2 focus:ring-accent-gold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                </button>
+                
+                <!-- Profile Icon -->
+                <button class="p-2 hover:text-accent-gold transition duration-200 rounded-full focus:outline-none focus:ring-2 focus:ring-accent-gold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                </button>
+
+                <!-- Like/Wishlist Icon -->
+                <button class="p-2 hover:text-accent-gold transition duration-200 rounded-full focus:outline-none focus:ring-2 focus:ring-accent-gold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                </button>
+                
+                <!-- Cart Icon -->
+                <button class="relative p-2 hover:text-accent-gold transition duration-200 rounded-full focus:outline-none focus:ring-2 focus:ring-accent-gold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shopping-bag"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" x2="21" y1="6" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    <span class="absolute top-1 right-1 h-2 w-2 bg-red-500 rounded-full"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Section 1: Auto-Scrolling Banner -->
+        <section id="banner-slider" class="relative w-full overflow-hidden h-96 md:h-[60vh] bg-primary-dark">
+            <div id="slides-container" class="flex h-full transition-transform duration-500 ease-in-out">
+                <!-- Slide 1 -->
+                <div class="slide flex-shrink-0 w-full h-full relative" style="background-image: url('https://placehold.co/1600x600/0A1931/C89932?text=New+Collection+Arrivals'); background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <h2 class="text-4xl md:text-6xl font-serif text-bg-cream text-center p-4">The Winter Couture Collection</h2>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide flex-shrink-0 w-full h-full relative" style="background-image: url('https://placehold.co/1600x600/C89932/0A1931?text=Bespoke+Designs'); background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <h2 class="text-4xl md:text-6xl font-serif text-primary-dark text-center p-4 bg-bg-cream bg-opacity-70 rounded-lg">Exquisite Handcrafted Details</h2>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide flex-shrink-0 w-full h-full relative" style="background-image: url('https://placehold.co/1600x600/964B00/FEFCF3?text=Luxury+Accessories'); background-size: cover; background-position: center;">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <h2 class="text-4xl md:text-6xl font-serif text-bg-cream text-center p-4">Shop The Signature Line</h2>
+                    </div>
+                </div>
+            </div>
+            <!-- Navigation Dots (Optional, for visual cue) -->
+            <div id="banner-dots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            </div>
+        </section>
+
+        <!-- Section 2: Women's Wear - Horizontal Scrollable -->
+        <section class="py-12 px-4 md:px-8">
+            <h2 class="text-3xl font-serif text-primary-dark mb-6 border-b-2 border-accent-gold inline-block pb-1">Women's Wear</h2>
+            <div class="horizontal-scroll-container overflow-x-scroll pb-4">
+                <!-- Content Wrapper: Forces two rows and uses flex to enable horizontal scrolling -->
+                <div class="flex flex-col flex-wrap h-[40rem] md:h-[35rem] w-max gap-6 pr-6">
+                    <!-- Product Card Component (Repeat 8 times for demonstration) -->
+                    <template id="product-card-template">
+                        <div class="w-64 flex-shrink-0 bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 transform hover:shadow-xl transition duration-300">
+                            <div class="relative h-64">
+                                <img src="https://placehold.co/600x400/0A1931/FEFCF3?text=Womens+Dress" alt="Product Image" class="w-full h-full object-cover">
+                                <button class="absolute top-2 right-2 p-2 bg-white rounded-full text-primary-dark opacity-80 hover:opacity-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-xs text-gray-500 uppercase">Gown</p>
+                                <h3 class="font-serif text-lg text-text-dark truncate">Midnight Velvet Gown</h3>
+                                <p class="text-xl font-bold text-accent-gold mt-2">₹14,999</p>
+                                <button class="mt-3 w-full bg-primary-dark text-bg-cream py-2 rounded-lg hover:bg-opacity-90 transition duration-200">
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </template>
+                    
+                    <!-- Insert 8 Women's Wear products -->
+                    <script>
+                        const createProductCards = (containerId, count, category, color) => {
+                            const container = document.getElementById(containerId);
+                            const template = document.getElementById('product-card-template').content;
+                            for(let i = 1; i <= count; i++) {
+                                const clone = template.cloneNode(true);
+                                const img = clone.querySelector('img');
+                                const title = clone.querySelector('h3');
+                                const type = clone.querySelector('p:first-child');
+                                img.src = `https://placehold.co/600x400/${color}/FEFCF3?text=${category}+${i}`;
+                                title.textContent = `${category} Piece ${i}`;
+                                type.textContent = category;
+                                container.appendChild(clone);
+                            }
+                        };
+                    </script>
+                    <div id="womens-wear-products" class="flex flex-col flex-wrap h-full w-max gap-6 pr-6">
+                        <!-- Products will be inserted here by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Accessories - Horizontal Scrollable -->
+        <section class="py-12 px-4 md:px-8 bg-gray-50">
+            <h2 class="text-3xl font-serif text-primary-dark mb-6 border-b-2 border-primary-dark inline-block pb-1">Accessories</h2>
+            <div class="horizontal-scroll-container overflow-x-scroll pb-4">
+                <!-- Content Wrapper: Forces two rows and uses flex to enable horizontal scrolling -->
+                <div id="accessories-products" class="flex flex-col flex-wrap h-[20rem] md:h-[35rem] w-max gap-6 pr-6">
+                    <!-- Products will be inserted here by JS -->
+                    <template id="accessory-card-template">
+                        <div class="w-64 flex-shrink-0 bg-white rounded-lg shadow-lg overflow-hidden border border-gray-100 transform hover:shadow-xl transition duration-300">
+                            <div class="relative h-64">
+                                <img src="https://placehold.co/600x400/8B4513/FEFCF3?text=Accessory+Bag" alt="Accessory Image" class="w-full h-full object-cover">
+                                <button class="absolute top-2 right-2 p-2 bg-white rounded-full text-primary-dark opacity-80 hover:opacity-100">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                                </button>
+                            </div>
+                            <div class="p-4">
+                                <p class="text-xs text-gray-500 uppercase">Handbag</p>
+                                <h3 class="font-serif text-lg text-text-dark truncate">The Royal Clutch</h3>
+                                <p class="text-xl font-bold text-primary-dark mt-2">₹4,999</p>
+                                <button class="mt-3 w-full bg-accent-gold text-primary-dark py-2 rounded-lg hover:bg-opacity-90 transition duration-200">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER: Social Media & Legal Links -->
+    <footer class="bg-primary-dark text-bg-cream py-10 mt-12">
+        <div class="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8">
+            
+            <!-- Column 1: Brand & Contact -->
+            <div>
+                <h3 class="text-xl font-serif text-accent-gold mb-4">ALOK DAS</h3>
+                <p class="text-sm">Women's Bespoke Couture</p>
+                <p class="text-sm mt-2">support@alokdas.com</p>
+                <p class="text-sm">+91 98765 43210</p>
+            </div>
+
+            <!-- Column 2: Legal & Support -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Support</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-accent-gold transition duration-150">Contact Support</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-150">Shipping & Returns</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-150">FAQ</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-150">Size Guide</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Policy & Info -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Information</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="#" class="hover:text-accent-gold transition duration-150">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-150">Terms of Service</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-150">Our Story</a></li>
+                    <li><a href="#" class="hover:text-accent-gold transition duration-150">Press</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Follow Us -->
+            <div>
+                <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+                <div class="flex space-x-4 text-2xl">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com" target="_blank" class="hover:text-accent-gold transition duration-150">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                    </a>
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com" target="_blank" class="hover:text-accent-gold transition duration-150">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                    </a>
+                    <!-- Pinterest -->
+                    <a href="https://www.pinterest.com" target="_blank" class="hover:text-accent-gold transition duration-150">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pinterest"><path d="M12.5 10A2.5 2.5 0 0 1 10 7.5c0-1.8 1-3.5 2.5-3.5 1.7 0 3.3 1.2 3.8 2.5.2.7.4 1.4.3 2.2-.2 1.3-1 2.4-2.2 2.8-.5.1-1 .1-1.5 0-.5-.1-.8-.4-.9-.9-.1-.3-.2-.7-.2-1.1s.1-.8.3-1.1c.2-.2.5-.3.8-.3s.5 0 .8.2c.3.2.5.5.6.8.1.3.1.6 0 .9-.1.3-.3.5-.5.7-.2.1-.5.1-.7 0s-.4-.2-.5-.5c-.1-.3-.1-.6 0-.9z"/><path d="M11 12c.5 0 1 .5 1 1s-.5 1-1 1-1-.5-1-1 .5-1 1-1z"/><path d="M12 21c-4.9 0-9-4.1-9-9s4.1-9 9-9c1.4 0 2.8.3 4 .8"/><path d="M21 15c-1.9 0-3.8-1-5-2.5"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-gray-700 text-center text-sm text-gray-400">
+            &copy; 2025 ALOK DAS. All Rights Reserved. Made in India.
+        </div>
+    </footer>
+
+    <!-- JavaScript for Functionality -->
+    <script>
+        // --- Product Card Generation ---
+        document.addEventListener('DOMContentLoaded', () => {
+            // Function to clone and append product cards for horizontal scrolling
+            const createProductCards = (containerId, count, category, color, isAccessory = false) => {
+                const container = document.getElementById(containerId);
+                const templateId = isAccessory ? 'accessory-card-template' : 'product-card-template';
+                const template = document.getElementById(templateId).content;
+                for(let i = 1; i <= count; i++) {
+                    const clone = template.cloneNode(true);
+                    const img = clone.querySelector('img');
+                    const title = clone.querySelector('h3');
+                    const price = clone.querySelector('.text-xl.font-bold');
+
+                    // Set unique product details
+                    if (!isAccessory) {
+                        img.src = `https://placehold.co/600x400/${color}/FEFCF3?text=Womens+Wear+${i}`;
+                        title.textContent = i % 2 === 0 ? `Brocade Silk Saree ${i}` : `Embroidered Lehenga ${i}`;
+                        price.textContent = `₹${10000 + i * 1500}`;
+                    } else {
+                        img.src = `https://placehold.co/600x400/${color}/FEFCF3?text=Accessory+${i}`;
+                        title.textContent = i % 2 === 0 ? `Handmade Earrings ${i}` : `Leather Handbag ${i}`;
+                        price.textContent = `₹${3000 + i * 500}`;
+                    }
+
+                    container.appendChild(clone);
+                }
+            };
+
+            // Generate products: 10 items total to ensure horizontal scrollbar appears on most screens (5 per row)
+            createProductCards('womens-wear-products', 10, 'Womens Wear', '0A1931', false);
+            createProductCards('accessories-products', 10, 'Accessories', '8B4513', true);
+
+
+            // --- Auto-Scrolling Banner Logic ---
+            const slidesContainer = document.getElementById('slides-container');
+            const slides = document.querySelectorAll('.slide');
+            const dotsContainer = document.getElementById('banner-dots');
+            const totalSlides = slides.length;
+            let currentIndex = 0;
+            const intervalTime = 5000; // 5 seconds
+
+            // 1. Create navigation dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('div');
+                dot.classList.add('w-3', 'h-3', 'rounded-full', 'bg-bg-cream', 'opacity-50', 'cursor-pointer', 'transition-opacity');
+                dot.setAttribute('data-index', index);
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsContainer.appendChild(dot);
+            });
+
+            const updateDots = () => {
+                const dots = dotsContainer.querySelectorAll('div');
+                dots.forEach((dot, index) => {
+                    dot.classList.remove('opacity-100');
+                    dot.classList.add('opacity-50');
+                    if (index === currentIndex) {
+                        dot.classList.remove('opacity-50');
+                        dot.classList.add('opacity-100');
+                    }
+                });
+            };
+
+            const goToSlide = (index) => {
+                currentIndex = index;
+                if (currentIndex >= totalSlides) {
+                    currentIndex = 0;
+                } else if (currentIndex < 0) {
+                    currentIndex = totalSlides - 1;
+                }
+                const offset = -currentIndex * 100;
+                slidesContainer.style.transform = `translateX(${offset}%)`;
+                updateDots();
+            };
+
+            // Auto-scroll loop
+            let sliderInterval = setInterval(() => {
+                currentIndex++;
+                goToSlide(currentIndex);
+            }, intervalTime);
+
+            // Initial setup
+            goToSlide(0);
+
+            // Optional: Pause on hover
+            const banner = document.getElementById('banner-slider');
+            banner.addEventListener('mouseenter', () => clearInterval(sliderInterval));
+            banner.addEventListener('mouseleave', () => {
+                sliderInterval = setInterval(() => {
+                    currentIndex++;
+                    goToSlide(currentIndex);
+                }, intervalTime);
+            });
+        });
+    </script>
+</body>
+</html>
